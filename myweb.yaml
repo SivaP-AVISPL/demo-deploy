@@ -23,7 +23,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: haissreddy1/webapp:64
+      - image: haissreddy1/webapp:65
         imagePullPolicy: Always
         name: myweb
 
