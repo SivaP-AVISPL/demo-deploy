@@ -23,7 +23,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: haissreddy1/myweb:"$BUILD_NUMBER"
+      - image: haissreddy1/myweb:<TAG>
         imagePullPolicy: Always
         name: myweb
 
