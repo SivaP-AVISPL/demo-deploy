@@ -9,38 +9,38 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: myweb:62
-  name: myweb:62
+    app: myweb
+  name: myweb
   namespace: pipeline-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myweb:62
+      app: myweb
   template:
     metadata:
       labels:
-        app: myweb:62
+        app: myweb
     spec:
       containers:
-      - image: haissreddy1/myweb:6260
+      - image: haissreddy1/webapp:62
         imagePullPolicy: Always
-        name: myweb:62
+        name: myweb
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: myweb:62
-  name: myweb:62
+    app: myweb
+  name: myweb
   namespace: pipeline-demo
 spec:
   ports:
-  - name: myweb:62  
+  - name: myweb  
     port: 80
     protocol: TCP
     targetPort: 80
   selector:
-    app: myweb:62
+    app: myweb
   type: LoadBalancer
